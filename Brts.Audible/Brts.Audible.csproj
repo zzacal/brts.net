@@ -1,19 +1,26 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <Version>0.1.0</Version>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <None Include="README.md" Pack="true" PackagePath="\"/>
-    <None Include="..\LICENSE" Pack="true" PackagePath="\"/>
-  </ItemGroup>
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+  
 
+  <PropertyGroup>
+    <Id>Brts.Audible</Id>
+    <Version>0.1.0</Version>
+    <Description>Audibles types allow you to listen for changes to a value.</Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageTags>pubsub, helper</PackageTags>
+
+    <PackageProjectUrl>https://github.com/zzacal/brts.net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/zzacal/brts.net</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\"/>
+    <None Include="..\LICENSE" Pack="true" PackagePath="\"/>
+  </ItemGroup>
 </Project>
