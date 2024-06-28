@@ -3,7 +3,8 @@
 public interface IAudible<T>
 {
     void OnChange(Action<T> handler);
-    T Value { set; get; }
+    void Set(T value);
+    T Get();
 }
 
 public class Audible<T> : IAudible<T>
@@ -20,17 +21,15 @@ public class Audible<T> : IAudible<T>
     }
 
     private T _value;
-    public T Value
-    {
-        set
-        {
-            _value = value;
-            if(_handler is not null) 
-            {
-                _handler(_value);
-            }
-        }
 
-        get => _value;
+    public void Set(T value)
+    {
+        _value = value;
+        if (_handler is not null)
+        {
+            _handler(_value);
+        }
     }
+
+    public T Get() => _value;
 }
